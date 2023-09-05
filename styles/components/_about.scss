@@ -1,0 +1,18 @@
+@import "../abstract/variables";
+
+#about {
+  margin: 5px;
+  padding: 1rem;
+  text-align: center;
+  h3 {
+    color: $first-color;
+    font-size: $text-size / 2.5;
+  }
+  h4 {
+    color: $third-color;
+    font-size: $text-size / 3;
+  }
+  p {
+    margin-top: 5px;
+  }
+}

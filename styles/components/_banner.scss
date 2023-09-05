@@ -1,0 +1,28 @@
+@import "../abstract/variables";
+
+.banner {
+  align-items: center;
+  // pensar que o path da imagem aqui embaixo tem que ser relativo ao arquivo compilador CSS "style.css" (por isso usamos só ../ ao invés de ../../)
+  background: url(../imagens/banner.jpeg) 27% center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  opacity: 0.9;
+
+  .inner-banner {
+    background-color: $second-color;
+    border-radius: 45px;
+    padding: 3rem;
+    opacity: 0.9;
+    h1 {
+      font-size: $text-size;
+      color: $third-color;
+    }
+    h2 {
+      // pego o $text-size, que é 3rem, e divido por 2, para ter $text-size de 1.5rem. Legal!
+      font-size: $text-size/2 ;
+      color: $first-color;
+    }
+  }
+}

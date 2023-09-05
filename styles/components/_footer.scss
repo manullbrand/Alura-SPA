@@ -1,0 +1,32 @@
+@import "../abstract/variables";
+
+@mixin bg-colors($colors...) {
+  background: linear-gradient(to left, $colors);
+}
+
+@mixin bg-colors($side, $colors...) {
+  @if ($side == "left") {
+    background: linear-gradient(to left, $colors);
+  } @else {
+    background: linear-gradient(to right, $colors);
+  }
+}
+
+footer {
+  border-top: 2px solid $second-color;
+  font-size: $text-size / 2;
+  margin-top: 1rem;
+  padding: 1.2rem;
+  text-align: center;
+  @include bg-colors(
+    "",
+    $first-color,
+    $second-color,
+    $third-color,
+    $fourth-color
+  );
+
+  i {
+    color: red;
+  }
+}
